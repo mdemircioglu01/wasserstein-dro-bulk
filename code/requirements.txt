@@ -1,0 +1,18 @@
+# Core scientific stack
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7
+
+# Optimization
+cvxpy>=1.4            # builds the LP (type-1) and SOCP (type-2) reformulations
+# Optional high-performance conic/MILP solvers (cvxpy will use them if installed):
+# gurobipy          # RECOMMENDED for the journal runs: fast LP/SOCP and the
+#                   # exact MISOCP l2 separation. Needs a license (free for
+#                   # academics): pip install gurobipy && grbgetkey <key>
+# mosek             # commercial, excellent for SOCP / MISOCP
+# Open-source fallbacks bundled with cvxpy: SCS / CLARABEL (LP/SOCP only;
+# no mixed-integer conic, so l2 separation falls back to "fixedpoint").
+
+# Multi-objective metaheuristic
+pymoo>=0.6           # NSGA-II for the approximate Pareto front
